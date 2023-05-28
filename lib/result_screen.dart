@@ -17,7 +17,7 @@ class ResultScreen extends StatelessWidget {
       return "Underweight";
     } else if (18.5 <= bmi && bmi <= 24.9) {
       return "Normal";
-    } else if (39.9 <= bmi && bmi <= 25.0) {
+    } else if (25 <= bmi && bmi <= 39.9) {
       return "Overweight";
     } else {
       return "Obese";
@@ -37,7 +37,7 @@ class ResultScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Your BMI is $BMI",
+              "Your BMI is ${BMI.toStringAsFixed(2)}",
               style: GoogleFonts.lato(
                 color: Colors.white,
                 fontSize: 24,

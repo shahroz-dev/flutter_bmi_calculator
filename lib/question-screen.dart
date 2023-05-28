@@ -50,22 +50,18 @@ class _QuestionScreenState extends State<QuestionScreen> {
             ),
             SizedBox(
               height: 400,
-              child: SingleChildScrollView(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    ...currentOption.options.map(
-                      (data) {
-                        return OptionButton(
-                            optionText: data,
-                            onTap: () {
-                              answerQuestion(data);
-                            });
-                      },
-                    )
-                  ],
-                ),
+              child: ListView(
+                children: [
+                  ...currentOption.options.map(
+                    (data) {
+                      return OptionButton(
+                          optionText: data,
+                          onTap: () {
+                            answerQuestion(data);
+                          });
+                    },
+                  )
+                ],
               ),
             ),
           ],
